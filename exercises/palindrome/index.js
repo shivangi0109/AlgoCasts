@@ -7,6 +7,32 @@
 //   palindrome("abba") === true
 //   palindrome("abcdefg") === false
 
-function palindrome(str) {}
+function palindrome(str) {
+  // Solution 1 -
+  // let reversedArray = [];
+
+  // for (let i = str.length - 1; i >= 0; i--) {
+  //   reversedArray.push(str[i]);
+  // }
+
+  // let reverse = reversedArray.join('');
+  // if (reverse !== str) {
+  //   return false;
+  // }
+
+  // return true;  
+
+  // Time Complexity - O(n)
+  // Space Complexity - O(n)
+
+  // Solution 2 -
+
+  return str.split('').every((char, i) => {
+    return char === str[str.length - i - 1];
+  });
+
+  // Time Complexity - O(n)
+  // Space Complexity - O(n)
+}
 
 module.exports = palindrome;
